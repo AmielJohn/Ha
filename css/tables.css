@@ -1,0 +1,263 @@
+/* Search / filter bars and tables (Pet Records, Vaccinations, Users) */
+
+/* toolbars, chips, filters */
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: .9em;
+  flex-wrap: wrap;
+  padding: 1em 1.2em;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 14em;
+  display: flex;
+  align-items: center;
+  gap: .6em;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: .7em;
+  padding: 0 .9em;
+}
+
+.page-actions > .search-box {
+  flex: 0 1 22em;
+}
+
+.page-actions.right > .search-box {
+  flex: 0 1 24em;
+}
+
+.search-box input {
+  border: 0 !important;
+  outline: 0 !important;
+  padding: .75em 0 !important;
+  background: none !important;
+}
+
+.search-box:focus-within {
+  border-color: #10b981;
+  box-shadow: 0 0 0 2px #10b98133;
+}
+
+.chip-group {
+  display: flex;
+  gap: .5em;
+  flex-wrap: wrap;
+}
+
+.chip {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: .6em;
+  padding: .6em 1.1em;
+  font-size: .88em;
+  font-weight: 500;
+  color: #334155;
+}
+
+.chip.active {
+  border-color: var(--primary);
+  background: #ecfdf5;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.filter-select {
+  width: auto !important;
+  min-width: 11em;
+}
+
+/* tables */
+
+.table-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .92em;
+}
+
+th {
+  text-align: left;
+  color: #64748b;
+  font-size: .74em;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  font-weight: 600;
+  padding: 1.1em 1.3em;
+  background: #f8fafc;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+td {
+  padding: .9em 1.3em;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+tbody tr:hover {
+  background: #fafcfd;
+}
+
+.pet-cell {
+  display: flex;
+  align-items: center;
+  gap: .8em;
+}
+
+.pet-cell span b {
+  display: block;
+}
+
+.pet-cell small {
+  font-size: .8em;
+}
+
+.male {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.female {
+  color: #db2777;
+  font-weight: 500;
+}
+
+.vaccine-chip {
+  background: #f1f5f9;
+  border: 1px solid var(--border);
+  border-radius: .5em;
+  padding: .3em .7em;
+  font-size: .88em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+td.center,
+.responsive-table th:last-child {
+  text-align: center;
+}
+
+.vaccine-table th:nth-child(n + 3) {
+  text-align: center;
+}
+
+.due-overdue {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.due-soon {
+  color: #d97706;
+  font-weight: 600;
+}
+
+.due-ok {
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-block;
+  padding: .3em .85em;
+  border-radius: 99px;
+  font-size: .78em;
+  font-weight: 600;
+  background: #f1f5f9;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.badge.green {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.badge.yellow {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.badge.red {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge.blue {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.badge.gray {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.row-actions {
+  display: flex;
+  gap: .45em;
+  justify-content: center;
+}
+
+.row-actions button {
+  width: 2.1em;
+  height: 2.1em;
+  border-radius: .55em;
+  border: 0;
+  background: #f1f5f9;
+  font-size: .9em;
+}
+
+.row-actions button:hover {
+  background: #e2e8f0;
+}
+
+.row-actions .danger:hover {
+  background: #fee2e2;
+}
+
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  padding: 1em 1.3em;
+  font-size: .85em;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+
+.pager {
+  display: flex;
+  gap: .4em;
+}
+
+.pager button {
+  min-width: 2.3em;
+  height: 2.3em;
+  border-radius: .55em;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-size: 1em;
+}
+
+.pager button.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.pager button:disabled {
+  opacity: .4;
+  cursor: default;
+}

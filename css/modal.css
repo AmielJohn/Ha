@@ -1,0 +1,119 @@
+/* Pop-up windows and the small message at the bottom of the screen */
+
+/* modals (live outside .app, so they carry their own scale) */
+
+.modal {
+  font-size: clamp(15px, 1vw, 21px);
+  position: fixed;
+  inset: 0;
+  background: #0f172a88;
+  display: grid;
+  place-items: center;
+  padding: 1em;
+  z-index: 90;
+}
+
+.modal-box {
+  background: #fff;
+  border-radius: 1.2em;
+  padding: 1.8em;
+  width: 100%;
+  max-width: 38em;
+  max-height: 92vh;
+  overflow: auto;
+  box-shadow: 0 2em 4em #0004;
+}
+
+.modal-box h2 {
+  margin: 0 0 1em;
+  font-size: 1.35em;
+}
+
+.modal-box form {
+  display: grid;
+  gap: 1em;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.form-grid .wide {
+  grid-column: 1/-1;
+}
+
+.modal-box label {
+  font-size: .88em;
+  font-weight: 600;
+  display: grid;
+  gap: .45em;
+}
+
+.modal-box .error-message {
+  min-height: 0;
+}
+
+.modal-box .error-message:empty {
+  display: none;
+}
+
+.modal-box input,
+.modal-box select {
+  padding: .7em .9em;
+  border-radius: .65em;
+  font-size: 1em;
+}
+
+.modal-box .btn {
+  padding: .75em 1.3em;
+}
+
+.details-list {
+  display: grid;
+  gap: .1em;
+  margin: 0 0 1.3em;
+}
+
+.details-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  padding: .7em 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: .95em;
+}
+
+.details-list dt {
+  color: var(--muted);
+}
+
+.details-list dd {
+  margin: 0;
+  font-weight: 600;
+  text-align: right;
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.6em;
+  transform: translate(-50%, 2em);
+  background: #0f172a;
+  color: #fff;
+  padding: .8em 1.4em;
+  border-radius: .8em;
+  font-size: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transition: .25s;
+  z-index: 99;
+  max-width: 90vw;
+  text-align: center;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
